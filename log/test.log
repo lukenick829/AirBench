@@ -1,0 +1,80 @@
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (22.6ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "benches" DISABLE TRIGGER ALL;ALTER TABLE "favorites" DISABLE TRIGGER ALL;ALTER TABLE "reviews" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "benches";
+DELETE FROM "favorites";
+DELETE FROM "reviews";
+DELETE FROM "users";
+INSERT INTO "benches" ("id", "description", "lat", "lng", "seating", "picture_url", "created_at", "updated_at") VALUES (980190962, 'MyString', 1.5, 1.5, 1, 'MyString', '2020-10-06 22:33:39.888324', '2020-10-06 22:33:39.888324'), (298486374, 'MyString', 1.5, 1.5, 1, 'MyString', '2020-10-06 22:33:39.888324', '2020-10-06 22:33:39.888324');
+INSERT INTO "favorites" ("id", "user_id", "bench_id", "created_at", "updated_at") VALUES (980190962, 1, 1, '2020-10-06 22:33:39.912156', '2020-10-06 22:33:39.912156'), (298486374, 1, 1, '2020-10-06 22:33:39.912156', '2020-10-06 22:33:39.912156');
+INSERT INTO "reviews" ("id", "body", "rating", "bench_id", "created_at", "updated_at", "author_id") VALUES (980190962, 'MyString', 1, 1, '2020-10-06 22:33:39.914910', '2020-10-06 22:33:39.914910', DEFAULT), (298486374, 'MyString', 1, 1, '2020-10-06 22:33:39.914910', '2020-10-06 22:33:39.914910', DEFAULT);
+INSERT INTO "users" ("id", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-10-06 22:33:39.917620', '2020-10-06 22:33:39.917620'), (298486374, 'MyString', 'MyString', 'MyString', '2020-10-06 22:33:39.917620', '2020-10-06 22:33:39.917620')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "benches" DISABLE TRIGGER ALL;ALTER TABLE "favorites" DISABLE TRIGGER ALL;ALTER TABLE "reviews" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "benches";
+DELETE FROM "favorites";
+DELETE FROM "reviews";
+DELETE FROM "users";
+INSERT INTO "benches" ("id", "description", "lat", "lng", "seating", "picture_url", "created_at", "updated_at") VALUES (980190962, 'MyString', 1.5, 1.5, 1, 'MyString', '2020-10-06 22:33:40.144367', '2020-10-06 22:33:40.144367'), (298486374, 'MyString', 1.5, 1.5, 1, 'MyString', '2020-10-06 22:33:40.144367', '2020-10-06 22:33:40.144367');
+INSERT INTO "favorites" ("id", "user_id", "bench_id", "created_at", "updated_at") VALUES (980190962, 1, 1, '2020-10-06 22:33:40.145510', '2020-10-06 22:33:40.145510'), (298486374, 1, 1, '2020-10-06 22:33:40.145510', '2020-10-06 22:33:40.145510');
+INSERT INTO "reviews" ("id", "body", "rating", "bench_id", "created_at", "updated_at", "author_id") VALUES (980190962, 'MyString', 1, 1, '2020-10-06 22:33:40.146559', '2020-10-06 22:33:40.146559', DEFAULT), (298486374, 'MyString', 1, 1, '2020-10-06 22:33:40.146559', '2020-10-06 22:33:40.146559', DEFAULT);
+INSERT INTO "users" ("id", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-10-06 22:33:40.147500', '2020-10-06 22:33:40.147500'), (298486374, 'MyString', 'MyString', 'MyString', '2020-10-06 22:33:40.147500', '2020-10-06 22:33:40.147500')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "benches" DISABLE TRIGGER ALL;ALTER TABLE "favorites" DISABLE TRIGGER ALL;ALTER TABLE "reviews" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "benches";
+DELETE FROM "favorites";
+DELETE FROM "reviews";
+DELETE FROM "users";
+INSERT INTO "benches" ("id", "description", "lat", "lng", "seating", "picture_url", "created_at", "updated_at") VALUES (980190962, 'MyString', 1.5, 1.5, 1, 'MyString', '2020-10-06 22:33:40.153644', '2020-10-06 22:33:40.153644'), (298486374, 'MyString', 1.5, 1.5, 1, 'MyString', '2020-10-06 22:33:40.153644', '2020-10-06 22:33:40.153644');
+INSERT INTO "favorites" ("id", "user_id", "bench_id", "created_at", "updated_at") VALUES (980190962, 1, 1, '2020-10-06 22:33:40.155204', '2020-10-06 22:33:40.155204'), (298486374, 1, 1, '2020-10-06 22:33:40.155204', '2020-10-06 22:33:40.155204');
+INSERT INTO "reviews" ("id", "body", "rating", "bench_id", "created_at", "updated_at", "author_id") VALUES (980190962, 'MyString', 1, 1, '2020-10-06 22:33:40.156238', '2020-10-06 22:33:40.156238', DEFAULT), (298486374, 'MyString', 1, 1, '2020-10-06 22:33:40.156238', '2020-10-06 22:33:40.156238', DEFAULT);
+INSERT INTO "users" ("id", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-10-06 22:33:40.157149', '2020-10-06 22:33:40.157149'), (298486374, 'MyString', 'MyString', 'MyString', '2020-10-06 22:33:40.157149', '2020-10-06 22:33:40.157149')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "benches" DISABLE TRIGGER ALL;ALTER TABLE "favorites" DISABLE TRIGGER ALL;ALTER TABLE "reviews" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "benches";
+DELETE FROM "favorites";
+DELETE FROM "reviews";
+DELETE FROM "users";
+INSERT INTO "benches" ("id", "description", "lat", "lng", "seating", "picture_url", "created_at", "updated_at") VALUES (980190962, 'MyString', 1.5, 1.5, 1, 'MyString', '2020-10-06 22:35:25.567583', '2020-10-06 22:35:25.567583'), (298486374, 'MyString', 1.5, 1.5, 1, 'MyString', '2020-10-06 22:35:25.567583', '2020-10-06 22:35:25.567583');
+INSERT INTO "favorites" ("id", "user_id", "bench_id", "created_at", "updated_at") VALUES (980190962, 1, 1, '2020-10-06 22:35:25.571262', '2020-10-06 22:35:25.571262'), (298486374, 1, 1, '2020-10-06 22:35:25.571262', '2020-10-06 22:35:25.571262');
+INSERT INTO "reviews" ("id", "body", "rating", "bench_id", "created_at", "updated_at", "author_id") VALUES (980190962, 'MyString', 1, 1, '2020-10-06 22:35:25.573859', '2020-10-06 22:35:25.573859', DEFAULT), (298486374, 'MyString', 1, 1, '2020-10-06 22:35:25.573859', '2020-10-06 22:35:25.573859', DEFAULT);
+INSERT INTO "users" ("id", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-10-06 22:35:25.576584', '2020-10-06 22:35:25.576584'), (298486374, 'MyString', 'MyString', 'MyString', '2020-10-06 22:35:25.576584', '2020-10-06 22:35:25.576584')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "benches" DISABLE TRIGGER ALL;ALTER TABLE "favorites" DISABLE TRIGGER ALL;ALTER TABLE "reviews" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "benches";
+DELETE FROM "favorites";
+DELETE FROM "reviews";
+DELETE FROM "users";
+INSERT INTO "benches" ("id", "description", "lat", "lng", "seating", "picture_url", "created_at", "updated_at") VALUES (980190962, 'MyString', 1.5, 1.5, 1, 'MyString', '2020-10-06 22:35:25.647808', '2020-10-06 22:35:25.647808'), (298486374, 'MyString', 1.5, 1.5, 1, 'MyString', '2020-10-06 22:35:25.647808', '2020-10-06 22:35:25.647808');
+INSERT INTO "favorites" ("id", "user_id", "bench_id", "created_at", "updated_at") VALUES (980190962, 1, 1, '2020-10-06 22:35:25.648957', '2020-10-06 22:35:25.648957'), (298486374, 1, 1, '2020-10-06 22:35:25.648957', '2020-10-06 22:35:25.648957');
+INSERT INTO "reviews" ("id", "body", "rating", "bench_id", "created_at", "updated_at", "author_id") VALUES (980190962, 'MyString', 1, 1, '2020-10-06 22:35:25.649797', '2020-10-06 22:35:25.649797', DEFAULT), (298486374, 'MyString', 1, 1, '2020-10-06 22:35:25.649797', '2020-10-06 22:35:25.649797', DEFAULT);
+INSERT INTO "users" ("id", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-10-06 22:35:25.650702', '2020-10-06 22:35:25.650702'), (298486374, 'MyString', 'MyString', 'MyString', '2020-10-06 22:35:25.650702', '2020-10-06 22:35:25.650702')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "benches" DISABLE TRIGGER ALL;ALTER TABLE "favorites" DISABLE TRIGGER ALL;ALTER TABLE "reviews" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "benches";
+DELETE FROM "favorites";
+DELETE FROM "reviews";
+DELETE FROM "users";
+INSERT INTO "benches" ("id", "description", "lat", "lng", "seating", "picture_url", "created_at", "updated_at") VALUES (980190962, 'MyString', 1.5, 1.5, 1, 'MyString', '2020-10-06 22:35:25.657644', '2020-10-06 22:35:25.657644'), (298486374, 'MyString', 1.5, 1.5, 1, 'MyString', '2020-10-06 22:35:25.657644', '2020-10-06 22:35:25.657644');
+INSERT INTO "favorites" ("id", "user_id", "bench_id", "created_at", "updated_at") VALUES (980190962, 1, 1, '2020-10-06 22:35:25.658702', '2020-10-06 22:35:25.658702'), (298486374, 1, 1, '2020-10-06 22:35:25.658702', '2020-10-06 22:35:25.658702');
+INSERT INTO "reviews" ("id", "body", "rating", "bench_id", "created_at", "updated_at", "author_id") VALUES (980190962, 'MyString', 1, 1, '2020-10-06 22:35:25.659478', '2020-10-06 22:35:25.659478', DEFAULT), (298486374, 'MyString', 1, 1, '2020-10-06 22:35:25.659478', '2020-10-06 22:35:25.659478', DEFAULT);
+INSERT INTO "users" ("id", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-10-06 22:35:25.660287', '2020-10-06 22:35:25.660287'), (298486374, 'MyString', 'MyString', 'MyString', '2020-10-06 22:35:25.660287', '2020-10-06 22:35:25.660287')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
